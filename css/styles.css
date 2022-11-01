@@ -144,8 +144,11 @@ img {
     display: block;
 }
 .hero-section {
-    background-color: var(--background-color-dark);
     padding: 200px 0 200px 0;
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.1), rgba(47, 48, 58, 0.4)), url('../images/Img.jpg');
+    background-color: var(--background-color-dark);
+    
 }
 
 .hero-title {
@@ -175,7 +178,6 @@ img {
     margin-left: auto;
     margin-right: auto;
     border: none;
-
 
 }
 .modal-button:hover, 
