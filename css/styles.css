@@ -119,11 +119,27 @@ nav a {
 .phone-number-link:focus {
     color: var(--hover-focus-color-blue);
 }
+.mail-item:hover,
+.phone-item:hover .icons-header {
+    fill: var(--hover-focus-color-blue);
+}
 
 /*    Посилання на mail     */
 .mail-item {
     margin-right: 50px;
+    display: flex;
+    align-items: center;
 }
+
+
+.phone-item {
+    display: flex;
+    align-items: center;
+}
+.icons-header {
+    margin-right: 10px;
+}
+
 
 .mail-link {
     font-weight: 500;
@@ -184,7 +200,7 @@ img {
 .modal-button:focus {
     background-color: #188CE8;
 }
-/*    MAIN section--Особливості    */
+/* FEATURES*/
 
 /* правильно ховаєм заголовок h1 */
 .visually-hidden {
@@ -194,7 +210,6 @@ img {
     margin: -1px;
     border: 0;
     padding: 0;
-
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
@@ -208,17 +223,31 @@ img {
     gap: 30px;
     justify-content: space-between;
 }
+.features-container {
+    display: flex;
+    margin: auto;
+    width: 270px;
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    
+}
+.feature-icons {
+    display: block;
+    margin: auto;
+}
 .feature-head {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--main-text-color-black);
-    margin-bottom: 10px;
+    margin-top: 30px;
 }
 .deskription-feature {
     line-height: 1.71;
-    color: var(--main-text-color-gray)
+    color: var(--main-text-color-gray);
+    margin-top: 10px;
 }
 
 /*    Main section--Чим ми займаємося    */
@@ -241,7 +270,7 @@ img {
     padding-top: 0;
 }
 
-/*     Main section--Наша команда    */
+/* Наша команда */
 .team-section {
     background-color: var(--background-color-team);
 } 
@@ -259,9 +288,6 @@ img {
     gap: 30px;
     justify-content: space-between;
     margin-top: 50px;
-    
-}
-.list-team:last-child {
 }
 .team-description {
     padding: 30px 0;
@@ -269,7 +295,7 @@ img {
 .team {
     background-color: var(--background-color-white);
     width: 270px;
-    height: 368px;
+    height: 428px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
      0px 1px 1px rgba(0, 0, 0, 0.14),
      0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -293,8 +319,70 @@ img {
     text-transform: capitalize;
     margin-top: 10px;
 }
-
-
+/* social-list */
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #AFB1B8;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+.social-icons {
+   fill: currentColor;
+}
+/* hover/focus */
+.social-link:hover,
+.social-link:focus {
+    background-color: #2196F3;
+}
+.social-link:hover .social-icons {
+    fill: #fff; 
+}
+.social-link:focus .social-icons {
+    fill: #fff;
+}
+/* client-list */
+.clients-title {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+.clients-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+.clients-link {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: #AFB1B8;
+}
+.client-icon {
+    fill: currentColor;
+}
+.clients-link:hover,
+.clients-link:focus {
+    border-color: var(--hover-focus-color-blue);
+    color: var(--hover-focus-color-blue);
+}
 
 /*    Portfolio   main */
 
@@ -343,9 +431,7 @@ img {
      0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-
 /*portfolio Maine content */
-
 
 .list-portfolio {
     display: flex;
@@ -360,6 +446,10 @@ img {
     width: 370px;
     box-sizing: border-box;
     background: var(--background-color-white);
+}
+.item:hover,
+item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .head-list {
     text-transform: capitalize;
@@ -411,8 +501,10 @@ img {
 }
 
 .address {
+    width: 231px;
     font-style: normal;
     margin-top: 20px;
+
 
 }
 
@@ -439,7 +531,7 @@ img {
     color: var(--main-text-color-gray);
 }
 
-.footer-phone-number-link {
+.footer-phone-link {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -453,7 +545,59 @@ img {
 .address-link:focus,
 .footer-mail-link:hover,
 .footer-mail-link:focus,
-.footer-phone-number-link:hover,
-.footer-phone-number-link:focus {
+.footer-phone-link:hover,
+.footer-phone-link:focus {
     color: var(--button-color-blue);
+}
+/* social-link-footer */
+.footer-container {
+    display: flex;
+    gap: 70px;
+
+}
+.section-address {
+
+}
+.section-social-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 206px;
+    height: 80px;
+    margin-top: 12px;
+}
+
+.social-link-footer {
+   display: flex;
+}
+
+.social-link-title {
+font-size: 14px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.social-list-footer {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link-dark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.social-icons-footer {
+    fill: currentColor;
+}
+
+/* hover/focus */
+.social-link-dark:hover,
+.social-link-dark:focus {
+    background-color: #2196F3;
 }
