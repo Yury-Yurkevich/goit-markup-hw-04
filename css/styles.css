@@ -202,7 +202,7 @@ img {
 }
 /* FEATURES*/
 
-/* правильно ховаєм заголовок h1 */
+/* правильно ховаєм заголовок */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -499,7 +499,9 @@ item:focus {
 .logo-white {
     color: #FFFFFF;
 }
+.contact-futer {
 
+}
 .address {
     width: 231px;
     font-style: normal;
